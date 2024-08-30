@@ -69,13 +69,17 @@ class ScreenHome extends StatelessWidget {
                       HomeCardBuild(
                         name: 'Subjects',
                         icon: h2,
-                        onClick: () {},
+                        onClick: () {
+                          Get.toNamed(Routes.SUBJECT);
+                        },
                         color: const Color(0xffd9ebfd),
                       ),
                       HomeCardBuild(
                         name: 'Class Rooms',
                         icon: h3,
-                        onClick: () {},
+                        onClick: () {
+                          Get.toNamed(Routes.CLASSROOM);
+                        },
                         color: const Color(0xffffe0dd),
                       ),
                       HomeCardBuild(

@@ -1,16 +1,14 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter_classroom/modules/subjects/controller/subjects_controller.dart';
+import 'package:flutter_classroom/widgets/custom_appbar.dart';
+
 import 'package:flutter_classroom/widgets/custom_details_widget.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_classroom/common/custom_size.dart';
-import 'package:flutter_classroom/modules/students/controller/student_controller.dart';
-import 'package:flutter_classroom/widgets/custom_appbar.dart';
 
-class ScreenStudentDetail extends StatelessWidget {
-  const ScreenStudentDetail({Key? key}) : super(key: key);
-
+class ScreenSubjectDetail extends StatelessWidget {
+  const ScreenSubjectDetail({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,20 +24,21 @@ class ScreenStudentDetail extends StatelessWidget {
           ),
           customVerticalGap(15),
           Expanded(
-            child: GetBuilder<StudentController>(
-                id: Get.find<StudentController>().studentWidget,
+            child: GetBuilder<SubjectController>(
+                id: Get.find<SubjectController>().subjectWidget,
                 builder: (controller) {
-                  if (controller.selectedStudent == null) {
+                  if (controller.selectedSubjects == null) {
                     return const Center(
                       child: Text('No Students'),
                     );
                   } else {
                     return DetailsWidget(
-                      content: 'Age: ${controller.selectedStudent!.age}',
+                      content:
+                          'Credit: ${controller.selectedSubjects!.credits}',
                       image:
-                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&s',
-                      subtitle: controller.selectedStudent!.email,
-                      title: controller.selectedStudent!.name,
+                          'https://cdn.shopify.com/s/files/1/0565/4039/7655/files/book_cover_1.png',
+                      subtitle: controller.selectedSubjects!.teacher,
+                      title: controller.selectedSubjects!.name,
                     );
                   }
                 }),

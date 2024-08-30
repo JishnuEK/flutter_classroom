@@ -52,7 +52,13 @@ class CustomCardWidget extends StatelessWidget {
                   flex: 1,
                   child: Row(
                     children: [
-                      Text(content, style: TextStyle(fontSize: 13.sp)),
+                      Expanded(
+                        child: Text(
+                          content,
+                          style: TextStyle(fontSize: 13.sp),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
                     ],
                   ),
                 ),
