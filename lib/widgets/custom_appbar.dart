@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class CustomAppBar {
-  static AppBar appbar(context,
+  static AppBar appbar(BuildContext context,
       {String? title, Widget? button, double? toolbarHeight}) {
     return AppBar(
       scrolledUnderElevation: 0.0,
