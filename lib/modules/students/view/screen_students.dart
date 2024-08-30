@@ -22,7 +22,7 @@ class ScreenStudents extends StatelessWidget {
               'Students',
               style: Theme.of(context)
                   .textTheme
-                  .titleMedium!
+                  .bodyMedium!
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             customVerticalGap(15),

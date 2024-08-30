@@ -27,7 +27,7 @@ TextTheme buildTextTheme = TextTheme(
 TextStyle bodyMedium = GoogleFonts.outfit(
   // fontFamily: fontName,
   fontWeight: FontWeight.w400,
-  fontSize: 15,
+  fontSize: 20,
   letterSpacing: -0.05,
 );
 TextStyle bodyLarge = GoogleFonts.outfit(

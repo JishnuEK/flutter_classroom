@@ -1,14 +1,3 @@
-// To parse this JSON data, do
-//
-//     final classroomModel = classroomModelFromJson(jsonString);
-
-import 'dart:convert';
-
-ClassroomModel classroomModelFromJson(String str) =>
-    ClassroomModel.fromJson(json.decode(str));
-
-String classroomModelToJson(ClassroomModel data) => json.encode(data.toJson());
-
 class ClassroomModel {
   List<Classroom> classrooms;
 
@@ -20,10 +9,6 @@ class ClassroomModel {
         classrooms: List<Classroom>.from(
             json["classrooms"].map((x) => Classroom.fromJson(x))),
       );
-
-  Map<String, dynamic> toJson() => {
-        "classrooms": List<dynamic>.from(classrooms.map((x) => x.toJson())),
-      };
 }
 
 class Classroom {
@@ -31,25 +16,21 @@ class Classroom {
   String layout;
   String name;
   int size;
+  String subject;
 
   Classroom({
     required this.id,
     required this.layout,
     required this.name,
     required this.size,
+    required this.subject,
   });
 
   factory Classroom.fromJson(Map<String, dynamic> json) => Classroom(
         id: json["id"],
         layout: json["layout"],
         name: json["name"],
-        size: json["size"],
+        size: json["size"] ?? 0,
+        subject: json.containsKey('subject') ? json["subject"].toString() : '',
       );
-
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "layout": layout,
-        "name": name,
-        "size": size,
-      };
 }

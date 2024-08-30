@@ -8,8 +8,12 @@ import 'package:get/get.dart';
 import '../../../repository/repository_index.dart';
 
 class SubjectController extends GetxController {
+  bool fromClassroom = false;
   @override
   void onInit() {
+    if (Get.arguments != null) {
+      fromClassroom = Get.arguments;
+    }
     getSubjects();
     super.onInit();
   }
@@ -27,8 +31,12 @@ class SubjectController extends GetxController {
   Subject? selectedSubjects;
 
   navigatToDetails(Subject _data) {
-    selectedSubjects = _data;
-    Get.toNamed(Routes.SUBJECTDETAILS);
+    if (fromClassroom) {
+      Get.back(result: _data);
+    } else {
+      selectedSubjects = _data;
+      Get.toNamed(Routes.SUBJECT_DETAILS);
+    }
   }
 
   //API

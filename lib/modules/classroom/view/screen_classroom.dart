@@ -21,7 +21,7 @@ class ScreenClassroom extends StatelessWidget {
               'Classroom',
               style: Theme.of(context)
                   .textTheme
-                  .titleMedium!
+                  .bodyMedium!
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             customVerticalGap(15),
@@ -33,7 +33,7 @@ class ScreenClassroom extends StatelessWidget {
                       return CustomLoading.defaultLoading();
                     } else if (controller.classroomList.isEmpty) {
                       return const Center(
-                        child: Text('No Students'),
+                        child: Text('No Classroom'),
                       );
                     } else {
                       return ListView.builder(

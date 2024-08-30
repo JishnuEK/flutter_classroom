@@ -10,3 +10,5 @@ const h2 = "assets/images/h2.png";
 const h3 = "assets/images/h3.png";
 const h4 = "assets/images/h4.png";
 const defaultImage = "assets/images/no_image.png";
+const sl = "assets/images/sl.png";
+const sr = "assets/images/sr.png";

@@ -1,5 +1,6 @@
 import 'package:flutter_classroom/modules/classroom/controller/classroom_binding.dart';
 import 'package:flutter_classroom/modules/classroom/view/screen_classroom.dart';
+import 'package:flutter_classroom/modules/classroom/view/screen_classroom_details.dart';
 import 'package:flutter_classroom/modules/home/controller/home_binding.dart';
 import 'package:flutter_classroom/modules/home/view/screen_home.dart';
 import 'package:flutter_classroom/modules/students/controller/student_binding.dart';
@@ -34,21 +35,27 @@ class AppPages {
         transitionDuration: const Duration(milliseconds: 200),
         transition: Transition.fadeIn),
     GetPage(
-        name: Routes.CLASSROOM,
-        page: () => const ScreenClassroom(),
-        binding: ClassroomBinding(),
-        transitionDuration: const Duration(milliseconds: 200),
-        transition: Transition.fadeIn),
-    GetPage(
         name: Routes.SUBJECT,
         page: () => const ScreenSubject(),
         binding: SubjectBinding(),
         transitionDuration: const Duration(milliseconds: 200),
         transition: Transition.fadeIn),
     GetPage(
-        name: Routes.SUBJECTDETAILS,
+        name: Routes.SUBJECT_DETAILS,
         page: () => const ScreenSubjectDetail(),
         binding: SubjectBinding(),
+        transitionDuration: const Duration(milliseconds: 200),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: Routes.CLASSROOM,
+        page: () => const ScreenClassroom(),
+        binding: ClassroomBinding(),
+        transitionDuration: const Duration(milliseconds: 200),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: Routes.CLASSROOM_DETAILS,
+        page: () => const ScreenClassroomDetails(),
+        binding: ClassroomBinding(),
         transitionDuration: const Duration(milliseconds: 200),
         transition: Transition.fadeIn),
   ];

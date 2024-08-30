@@ -21,7 +21,7 @@ class ScreenStudentDetail extends StatelessWidget {
             'Student Details',
             style: Theme.of(context)
                 .textTheme
-                .titleMedium!
+                .bodyMedium!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           customVerticalGap(15),
