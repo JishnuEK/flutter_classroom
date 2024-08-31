@@ -7,9 +7,14 @@ import 'package:flutter_classroom/widgets/custom_alert.dart';
 import 'package:get/get.dart';
 
 class StudentController extends GetxController {
+  bool fromRegistration = false;
+
   @override
   void onInit() {
     super.onInit();
+    if (Get.arguments != null) {
+      fromRegistration = Get.arguments;
+    }
     getStudents();
   }
 
@@ -26,8 +31,12 @@ class StudentController extends GetxController {
   Student? selectedStudent;
 
   navigatToDetails(Student _student) {
-    selectedStudent = _student;
-    Get.toNamed(Routes.STUDENTS_DETAILS);
+    if (fromRegistration) {
+      Get.back(result: _student);
+    } else {
+      selectedStudent = _student;
+      Get.toNamed(Routes.STUDENTS_DETAILS);
+    }
   }
 
   //API

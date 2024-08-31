@@ -6,4 +6,6 @@ class Routes {
   static const CLASSROOM_DETAILS = '/classroom_details';
   static const SUBJECT = '/subject';
   static const SUBJECT_DETAILS = '/subject_details';
+  static const REGISTRATION_LIST = '/registration_list';
+  static const NEW_REGISTRATION = '/new_registration';
 }

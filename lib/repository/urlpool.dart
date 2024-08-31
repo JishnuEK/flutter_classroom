@@ -1,7 +1,7 @@
 class URLPool {
 //
-  final LOGIN = "login";
-  final getClassroom = 'classrooms';
-  final getStudents = 'students';
-  final getSubjects = 'subjects';
+  final getClassroom = 'classrooms/';
+  final getStudents = 'students/';
+  final getSubjects = 'subjects/';
+  final getRegistration = 'registration/';
 }

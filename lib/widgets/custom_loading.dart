@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -23,10 +24,13 @@ class CustomLoading {
           decoration: BoxDecoration(
               color: Get.theme.colorScheme.secondary,
               borderRadius: BorderRadius.all(Radius.circular(15))),
-          width: 25,
-          height: 25,
-          child: CircularProgressIndicator(
-            color: Get.theme.colorScheme.primary,
+          width: 45.h,
+          height: 45.h,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: CircularProgressIndicator(
+              color: Get.theme.colorScheme.primary,
+            ),
           ),
         ),
       ),

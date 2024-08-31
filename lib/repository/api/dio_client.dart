@@ -137,10 +137,10 @@ class DioClient {
         cancelToken: cancelToken,
       );
       return response.data;
-    } on DioError catch (err) {
-      return err;
-    } on FormatException catch (_) {
-      throw const FormatException("Unable to process the data");
+    } on SocketException catch (e) {
+      throw SocketException(e.toString());
+    } on DioException catch (err) {
+      throw err;
     } catch (e) {
       rethrow;
     }

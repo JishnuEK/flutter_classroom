@@ -88,7 +88,9 @@ class ScreenHome extends StatelessWidget {
                       HomeCardBuild(
                         name: 'Registration',
                         icon: h4,
-                        onClick: () {},
+                        onClick: () {
+                          Get.toNamed(Routes.REGISTRATION_LIST);
+                        },
                         color: const Color(0xfffff3d9),
                       )
                     ],

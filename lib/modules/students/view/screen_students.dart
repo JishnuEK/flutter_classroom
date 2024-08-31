@@ -18,13 +18,17 @@ class ScreenStudents extends StatelessWidget {
         padding: CustomSize.horizontalPaddingOnly,
         child: Column(
           children: [
-            Text(
-              'Students',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .copyWith(fontWeight: FontWeight.bold),
-            ),
+            GetBuilder<StudentController>(
+                id: Get.find<StudentController>().studentWidget,
+                builder: (controller) {
+                  return Text(
+                    controller.fromRegistration ? 'Add Student' : 'Students',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium!
+                        .copyWith(fontWeight: FontWeight.bold),
+                  );
+                }),
             customVerticalGap(15),
             Expanded(
               child: GetBuilder<StudentController>(
