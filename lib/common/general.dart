@@ -7,7 +7,7 @@ const DEBUGMODE = false;
 const appName = "";
 
 /// Logging config
-const kLOG_TAG = "[JIGSS APP]";
+const kLOG_TAG = "[APP]";
 const kLOG_ENABLE = true;
 const kLOG_IMPORTANT_LOG = true;
 

@@ -10,4 +10,12 @@ class HomeController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  String get ListWidget => 'ListWidget';
+  bool showGrid = true;
+
+  toogle() {
+    showGrid = !showGrid;
+    update([ListWidget]);
+  }
 }

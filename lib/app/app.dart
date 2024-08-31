@@ -32,7 +32,6 @@ class _MyAppState extends State<MyApp> {
             initialRoute: AppPages.INITIAL,
             getPages: AppPages.pages,
             theme: AppTheme().themeData(),
-            // home: CashfreePayment(),
           );
         });
   }

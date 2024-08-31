@@ -5,8 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_classroom/common/theme/colors.dart';
 import 'package:flutter_classroom/common/theme/textstyle.dart';
 
-import 'package:get/get.dart';
-
 class AppTheme {
   ThemeData themeData({bool isDark = false}) {
     return ThemeData(
@@ -78,14 +76,4 @@ class AppTheme {
       ),
     );
   }
-}
-
-//WidgetStateProperty
-//WidgetStateProperty
-
-// *-/-**-
-toggleTheme(bool isDark) {
-  Get.changeThemeMode(
-    isDark ? ThemeMode.dark : ThemeMode.light,
-  );
 }

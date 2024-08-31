@@ -1,8 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter_classroom/modules/registration/widgets/registraion_card_widget.dart';
 import 'package:flutter_classroom/modules/registration/widgets/selection_widget.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_classroom/common/custom_size.dart';
