@@ -67,18 +67,19 @@ class ScreenNewRegistration extends StatelessWidget {
                     id: Get.find<RegistrationController>().saveWidget,
                     builder: (controller) {
                       return Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Expanded(
-                            flex: 3,
+                          SizedBox(
+                            width: MediaQuery.sizeOf(context).width / 2,
                             child: CustomButton.textButton(
                               context,
-                              title: 'New registration',
+                              title: ' Register',
                               radius: 50,
                               onPressed: () {
                                 controller.callSaveFunction();
                               },
-                              color1: Color(0xffaac9bf),
-                              color2: Color(0xff25af7f),
+                              color1: Color(0xff0f8d62),
+                              color2: Color.fromARGB(255, 255, 255, 255),
                             ),
                           ),
                         ],

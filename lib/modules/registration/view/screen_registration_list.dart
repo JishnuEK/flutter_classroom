@@ -70,8 +70,8 @@ class ScreenRegistrationList extends StatelessWidget {
                     onPressed: () {
                       Get.toNamed(Routes.NEW_REGISTRATION);
                     },
-                    color1: Color(0xffaac9bf),
-                    color2: Color(0xff25af7f),
+                    color1: Color(0xffd9ebff),
+                    color2: Color(0xff007aff),
                   ),
                 ),
               ],
