@@ -17,13 +17,17 @@ class ScreenSubject extends StatelessWidget {
         padding: CustomSize.horizontalPaddingOnly,
         child: Column(
           children: [
-            Text(
-              'Students',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .copyWith(fontWeight: FontWeight.bold),
-            ),
+            GetBuilder<SubjectController>(
+                id: Get.find<SubjectController>().subjectWidget,
+                builder: (controller) {
+                  return Text(
+                    controller.fromClassroom ? 'Add Subject' : 'Subjects',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium!
+                        .copyWith(fontWeight: FontWeight.bold),
+                  );
+                }),
             customVerticalGap(15),
             Expanded(
               child: GetBuilder<SubjectController>(

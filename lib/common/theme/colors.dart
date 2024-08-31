@@ -43,7 +43,7 @@ final ColorScheme lightColorScheme = ColorScheme(
 );
 // *-*-*-*
 // LIGHT COLORS*-*-*-
-const Color LightPrimary = Color.fromARGB(255, 255, 25, 0);
+const Color LightPrimary = Color(0xff8fb3a9);
 const Color LightSecondary = const Color(0xFFFFFFFF);
 const Color LightBackgroundColor =
     Color.fromARGB(255, 255, 255, 255); //Color(0xfff8f8f8);

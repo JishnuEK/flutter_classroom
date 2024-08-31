@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_classroom/common/constants.dart';
 import 'package:flutter_classroom/common/custom_size.dart';
 import 'package:flutter_classroom/modules/home/widgets/home_card_widgets.dart';
@@ -17,6 +18,7 @@ class ScreenHome extends StatelessWidget {
           padding: CustomSize.horizontalPaddingOnly,
           child: Column(
             children: [
+              customVerticalGap(15),
               Expanded(
                   flex: 1,
                   child: Row(
@@ -48,15 +50,16 @@ class ScreenHome extends StatelessWidget {
                       ),
                     ],
                   )),
+              customVerticalGap(15),
               Expanded(
                   flex: 8,
                   child: GridView(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 5,
-                            childAspectRatio: 0.8,
-                            mainAxisSpacing: 5.0),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        mainAxisExtent: MediaQuery.sizeOf(context).height / 5,
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 5,
+                        childAspectRatio: 0.8,
+                        mainAxisSpacing: 5.0),
                     children: [
                       HomeCardBuild(
                         name: 'Students',
